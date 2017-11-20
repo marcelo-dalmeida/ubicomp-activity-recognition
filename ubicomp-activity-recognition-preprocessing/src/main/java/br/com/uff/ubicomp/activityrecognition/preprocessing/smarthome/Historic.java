@@ -1,4 +1,4 @@
-package smarthome;
+package br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -27,7 +27,7 @@ public class Historic {
 	private static List<Integer> workingWithPC = new ArrayList<Integer>(Arrays.asList(9, 19, 29, 39));
 	private static List<Integer> cleaningTheHOUSE = new ArrayList<Integer>(Arrays.asList(10, 20, 30, 40));
 	private static List<Integer> leaving = new ArrayList<Integer>(Arrays.asList(11, 21, 31, 41));
-	private static File file = new File("sheet.xls");
+	private static File file = new File("src/main/resources/sheet.xls");
 	private static FileInputStream fileIn;
 	private static HSSFWorkbook workbook;
 	private static Map<Integer, Map<LocalTime, Activity>> historic;

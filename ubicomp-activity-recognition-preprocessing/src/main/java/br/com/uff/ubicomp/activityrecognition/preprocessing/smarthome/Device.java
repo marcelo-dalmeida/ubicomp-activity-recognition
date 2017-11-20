@@ -1,4 +1,4 @@
-package smarthome;
+package br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome;
 
 import java.util.HashMap;
 import java.util.Map;

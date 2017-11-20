@@ -1,4 +1,4 @@
-package br.com.uff.ubicomp.activityrecognition.server.persistence.repository;
+package br.com.uff.ubicomp.activityrecognition.preprocessing.persistence.repository;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ import javax.transaction.Transactional;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 
-import br.com.uff.ubicomp.activityrecognition.server.persistence.PersistenceManager;
+import br.com.uff.ubicomp.activityrecognition.preprocessing.persistence.PersistenceManager;
 
 public abstract class AbstractRepository<T, ID extends Serializable> {
 	

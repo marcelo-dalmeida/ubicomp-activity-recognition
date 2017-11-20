@@ -1,4 +1,4 @@
-package smarthome;
+package br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome;
 
 public enum Environment {
 	ROOM, KITCHEN, BEDROOM, BATHROOM, EXTERNAL_AREA;
