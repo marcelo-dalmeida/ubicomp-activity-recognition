@@ -1,0 +1,17 @@
+package br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome;
+
+import java.time.LocalTime;
+
+public class LightRoom  implements Device{
+private float consumption = (float) 0.448;
+
+@Override
+	public Float getComsumption(LocalTime time, Activity activity) {
+if () {
+	return consumption;
+} else {
+	return 0;
+}
+	}
+
+}

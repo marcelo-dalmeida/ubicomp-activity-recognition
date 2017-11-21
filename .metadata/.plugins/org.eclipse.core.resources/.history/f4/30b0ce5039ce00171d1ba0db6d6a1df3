@@ -1,0 +1,17 @@
+package br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public enum Environment {
+	ROOM, KITCHEN, BEDROOM, BATHROOM, EXTERNAL_AREA;
+private static Map<Environment, List<Device>> deviceMap = new HashMap<Environment, List<Device>>();
+
+static {
+deviceMap.put(Environment.BATHROOM, new ArrayList<Device>(Arrays.asList(new LightBathroom(), new Shower())));
+deviceMap.put(Environment.BEDROOM, new ArrayList<Device>(Arrays.asList(new LightBedroom(), new AirConditioningBedroom(), new PC())));
+}
+}

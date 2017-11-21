@@ -1,0 +1,22 @@
+package br.com.uff.ubicomp.activityrecognition.preprocessing;
+
+import br.com.uff.ubicomp.activityrecognition.preprocessing.persistence.entity.EnergyPositionActivity;
+import br.com.uff.ubicomp.activityrecognition.preprocessing.persistence.repository.EnergyPositionActivityRepository;
+import br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.Historic;
+
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+		Historic historic = new Historic();
+		EnergyPositionActivity energyPositionActivity;
+		EnergyPositionActivityRepository energyPositionActivityRepository = new EnergyPositionActivityRepository();
+		for (int i = 0; i < historic.getHistoric().size(); i++) {
+Map<LocalTime, Activity> userHistoric = historic.getHistoric().get(i);
+			for (int j = 0; j < userHistoric.size(); j++) {
+			energyPositionActivity = new EnergyPositionActivity();
+			energyPositionActivityRepository.save(energyPositionActivity);
+		}
+	}
+
+	}
+}

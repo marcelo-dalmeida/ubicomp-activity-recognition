@@ -1,0 +1,6 @@
+package br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome;
+
+public class VacuumCleaner implements Device {
+float consumption = (float) 0.235;
+
+}

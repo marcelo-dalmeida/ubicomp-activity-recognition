@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.AirConditioningBedroom"/>
+<fullyQualifiedTypeName name="br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.AirConditioningRoom"/>
+<fullyQualifiedTypeName name="br.com.uff.ubicomp.activityrecognition.preprocessing.persistence.entity.EnergyPositionActivity"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.Environment"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+</qualifiedTypeNameHistroy>

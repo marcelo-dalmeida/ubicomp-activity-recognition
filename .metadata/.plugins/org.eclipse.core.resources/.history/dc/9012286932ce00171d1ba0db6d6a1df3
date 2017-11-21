@@ -1,0 +1,14 @@
+package br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public enum Environment {
+	ROOM, KITCHEN, BEDROOM, BATHROOM, EXTERNAL_AREA;
+private Map<Environment, List<Device>> deviceMap = new HashMap<Environment, List<Device>>();
+
+static {
+deviceMap.
+}
+}

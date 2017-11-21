@@ -1,0 +1,20 @@
+package br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome;
+
+import java.time.LocalTime;
+import java.util.Random;
+
+public class AirConditioningBedroom implements Device {
+	private float consumption = (float) 8.333;
+
+@Override
+	public Float getComsumption(LocalTime time, Activity activity) {
+Random random = new Random();
+	//int probable = randon.
+	if (activity == Activity.WORKING_WITH_PC || activity == Activity.SLEEPING) {
+	return consumption;
+} else {
+	return (float) 0;
+}
+	}
+
+}

@@ -1,0 +1,30 @@
+package br.com.uff.ubicomp.activityrecognition.preprocessing;
+
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.TreeMap;
+
+import br.com.uff.ubicomp.activityrecognition.preprocessing.persistence.entity.EnergyPositionActivity;
+import br.com.uff.ubicomp.activityrecognition.preprocessing.persistence.repository.EnergyPositionActivityRepository;
+import br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.Activity;
+import br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.Historic;
+
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+		Historic historic = new Historic();
+		EnergyPositionActivity energyPositionActivity;
+		EnergyPositionActivityRepository energyPositionActivityRepository = new EnergyPositionActivityRepository();
+		TreeMap<LocalTime, Activity> userHistoric;
+List<LocalTime> times;
+		for (int i = 0; i < historic.getHistoric().size(); i++) {
+userHistoric = historic.getHistoric().get(i);
+times = new ArrayList<LocalTime>(userHistoric.keySet());
+for (int j = 0; j < userHistoric.size(); j++) {
+			energyPositionActivity = new EnergyPositionActivity(i, times.	, user_position, activity, roomEnergy, bedroomEnergy, bathroomEnergy, kitchenEnergy, externalAreaEnergy)
+//			energyPositionActivityRepository.save(energyPositionActivity);
+		}
+	}
+
+	}
+}
