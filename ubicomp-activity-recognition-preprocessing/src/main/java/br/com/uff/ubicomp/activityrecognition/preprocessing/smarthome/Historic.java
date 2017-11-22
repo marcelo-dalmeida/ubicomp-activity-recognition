@@ -119,80 +119,82 @@ public class Historic {
 	}
 
 	private static void formateToMinutes() {
-		List<LocalTime> minuts;
-		int timeMax;
+List<LocalTime> times;
+		//int timeMax;
 		Map<LocalTime, Activity> userMap;
-		LocalTime now;
-		for (int user = 0; user < historic.size(); user++) {
-			userMap = historic.get(user);
-			timeMax = userMap.size();
-			minuts = new ArrayList<LocalTime>(userMap.keySet());
-			for (int time = 0; time < timeMax; time++) {
-				now = minuts.get(time);
-				switch (now.getMinute()) {
+//		LocalTime now;
+//		for (int user = 0; user < historic.size(); user++) {
+for (Integer user : historic.keySet()) {
+		userMap = historic.get(user);
+//			timeMax = userMap.size();
+times = new ArrayList<LocalTime>(userMap.keySet());
+//			for (int time = 0; time < timeMax; time++) {
+for (LocalTime time : times){
+	//now = time;
+				switch (time.getMinute()) {
 				case 00:
-					userMap.put(LocalTime.of(now.getHour(), 1), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 2), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 3), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 4), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 5), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 6), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 7), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 8), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 9), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 10), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 11), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 12), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 13), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 14), userMap.get(now));
+					userMap.put(LocalTime.of(time.getHour(), 1), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 2), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 3), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 4), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 5), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 6), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 7), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 8), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 9), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 10), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 11), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 12), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 13), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 14), userMap.get(time));
 					break;
 				case 15:
-					userMap.put(LocalTime.of(now.getHour(), 16), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 17), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 18), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 19), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 20), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 21), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 22), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 23), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 24), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 25), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 26), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 27), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 28), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 29), userMap.get(now));
+					userMap.put(LocalTime.of(time.getHour(), 16), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 17), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 18), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 19), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 20), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 21), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 22), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 23), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 24), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 25), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 26), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 27), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 28), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 29), userMap.get(time));
 					break;
 				case 30:
-					userMap.put(LocalTime.of(now.getHour(), 31), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 32), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 33), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 34), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 35), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 36), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 37), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 38), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 39), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 40), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 41), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 42), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 43), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 44), userMap.get(now));
+					userMap.put(LocalTime.of(time.getHour(), 31), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 32), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 33), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 34), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 35), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 36), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 37), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 38), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 39), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 40), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 41), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 42), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 43), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 44), userMap.get(time));
 					break;
 				case 45:
-					userMap.put(LocalTime.of(now.getHour(), 46), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 47), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 48), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 49), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 50), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 51), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 52), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 53), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 54), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 55), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 56), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 57), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 58), userMap.get(now));
-					userMap.put(LocalTime.of(now.getHour(), 59), userMap.get(now));
+					userMap.put(LocalTime.of(time.getHour(), 46), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 47), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 48), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 49), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 50), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 51), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 52), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 53), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 54), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 55), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 56), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 57), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 58), userMap.get(time));
+					userMap.put(LocalTime.of(time.getHour(), 59), userMap.get(time));
 					break;
 				}
 			}

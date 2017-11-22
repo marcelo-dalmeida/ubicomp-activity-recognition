@@ -1,8 +1,12 @@
 package br.com.uff.ubicomp.activityrecognition.preprocessing.persistence.entity;
 
+
+
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -13,7 +17,7 @@ import br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.Activity;
 import br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.Environment;
 
 @Entity
-@Table(name = "energy_position_activity")
+@Table(name = "historic")
 public class EnergyPositionActivity {
 
 	@Id
@@ -22,25 +26,31 @@ public class EnergyPositionActivity {
 private int user_id;
 	@Temporal(TemporalType.TIME)
 	private Date time;
+	@Enumerated(EnumType.STRING)
 	private Environment user_position;
+	@Enumerated(EnumType.STRING)
 	private Activity activity;
-	private Float roomEnergy;
+	private Float livingRoomEnergy;
 	private Float bedroomEnergy;
 	private Float bathroomEnergy;
 	private Float kitchenEnergy;
 	private Float externalAreaEnergy;
 
-	public EnergyPositionActivity(int user_id, Date time, Environment user_position, Activity activity, Float roomEnergy, Float bedroomEnergy, Float bathroomEnergy, Float kitchenEnergy, Float externalAreaEnergy) {
+	public EnergyPositionActivity(int user_id, Date time, Environment user_position, Activity activity, Float livingRoomEnergy, Float bedroomEnergy, Float bathroomEnergy, Float kitchenEnergy, Float externalAreaEnergy) {
 		super();
 		this.user_id = user_id;
 		this.time = time;
 		this.user_position = user_position;
 		this.activity = activity;
-		this.roomEnergy = roomEnergy;
+		this.livingRoomEnergy = livingRoomEnergy;
 		this.bedroomEnergy = bedroomEnergy;
 		this.bathroomEnergy = bathroomEnergy;
 		this.kitchenEnergy = kitchenEnergy;
 		this.externalAreaEnergy = externalAreaEnergy;
+	}
+
+	public EnergyPositionActivity() {
+		
 	}
 
 	public int getUserId() {
@@ -60,7 +70,7 @@ private int user_id;
 	}
 
 	public Float getMeasurementOfRoom() {
-		return roomEnergy;
+		return livingRoomEnergy;
 	}
 
 	public Float getMeasurementOfBedroom() {
