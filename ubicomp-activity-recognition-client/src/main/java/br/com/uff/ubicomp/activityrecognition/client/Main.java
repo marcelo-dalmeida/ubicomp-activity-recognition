@@ -1,4 +1,4 @@
-package br.com.uff.ubicomp.activityrecognition.preprocessing;
+package br.com.uff.ubicomp.activityrecognition.client;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Random;
 import java.util.TreeMap;
 
-import br.com.uff.ubicomp.activityrecognition.preprocessing.persistence.entity.EnergyPositionActivity;
-import br.com.uff.ubicomp.activityrecognition.preprocessing.persistence.repository.EnergyPositionActivityRepository;
-import br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.Activity;
-import br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.Environment;
-import br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.Historic;
+import br.com.uff.ubicomp.activityrecognition.client.persistence.entity.EnergyPositionActivity;
+import br.com.uff.ubicomp.activityrecognition.client.persistence.repository.EnergyPositionActivityRepository;
+import br.com.uff.ubicomp.activityrecognition.client.smarthome.Activity;
+import br.com.uff.ubicomp.activityrecognition.client.smarthome.Environment;
+import br.com.uff.ubicomp.activityrecognition.client.smarthome.Historic;
 
 public class Main {
 

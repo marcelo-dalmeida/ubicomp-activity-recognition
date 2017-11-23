@@ -1,6 +1,4 @@
-package br.com.uff.ubicomp.activityrecognition.preprocessing.persistence.entity;
-
-
+package br.com.uff.ubicomp.activityrecognition.client.persistence.entity;
 
 import java.util.Date;
 
@@ -13,8 +11,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.Activity;
-import br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.Environment;
+import br.com.uff.ubicomp.activityrecognition.client.smarthome.Activity;
+import br.com.uff.ubicomp.activityrecognition.client.smarthome.Environment;
 
 @Entity
 @Table(name = "historic")

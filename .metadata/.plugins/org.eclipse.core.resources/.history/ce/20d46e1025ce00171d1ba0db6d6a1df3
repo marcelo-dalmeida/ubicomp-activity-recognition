@@ -1,8 +1,0 @@
-package br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome;
-
-import java.util.HashMap;
-import java.util.Map;
-
-public interface Device {
-	public static Float getComsumption(LocalTime time, Activity activity);
-}
