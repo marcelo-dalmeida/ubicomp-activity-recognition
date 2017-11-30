@@ -36,7 +36,7 @@ public class Main {
 				act = userHistoric.get(time);
 				switch (act) {
 				case READING:
-					user_position = Environment.ROOM;
+					user_position = Environment.LIVING_ROOM;
 					break;
 				case BATHING:
 					user_position = Environment.BATHROOM;
@@ -45,10 +45,10 @@ public class Main {
 					user_position = Environment.KITCHEN;
 					break;
 				case EATING:
-					user_position = Environment.ROOM;
+					user_position = Environment.LIVING_ROOM;
 					break;
 				case WATCHING_TV:
-					user_position = Environment.ROOM;
+					user_position = Environment.LIVING_ROOM;
 					break;
 				case WORKING_WITH_PC:
 					user_position = Environment.BEDROOM;
@@ -61,7 +61,7 @@ public class Main {
 					int localrandom = random.nextInt(4);
 					switch (localrandom) {
 					case 0:
-						user_position = Environment.ROOM;
+						user_position = Environment.LIVING_ROOM;
 						break;
 					case 1:
 						user_position = Environment.BEDROOM;
@@ -83,7 +83,7 @@ public class Main {
 				}
 				energyPositionActivity = new EnergyPositionActivity(codUser,
 						Date.from(time.atDate(LocalDate.of(2017, 05, 22)).atZone(ZoneId.systemDefault()).toInstant()),
-						user_position, act, Environment.getMeasurementOfEnvironment(Environment.ROOM, act, time),
+						user_position, act, Environment.getMeasurementOfEnvironment(Environment.LIVING_ROOM, act, time),
 						Environment.getMeasurementOfEnvironment(Environment.BEDROOM, act, time),
 						Environment.getMeasurementOfEnvironment(Environment.BATHROOM, act, time),
 						Environment.getMeasurementOfEnvironment(Environment.KITCHEN, act, time),

@@ -1,5 +1,6 @@
 package br.com.uff.ubicomp.activityrecognition.server;
 
+import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -14,6 +15,8 @@ import lac.cnet.sddl.udi.core.listener.UDIDataReaderListener;
 
 public class CoreServer implements UDIDataReaderListener<ApplicationObject> {
 	
+	private  SensorDataHandler sensorDataHandler;
+	
 	SddlLayer core;
 	int counter;
 
@@ -26,6 +29,9 @@ public class CoreServer implements UDIDataReaderListener<ApplicationObject> {
 	}
 
 	public CoreServer() {
+		
+		sensorDataHandler = new  SensorDataHandler();
+		
 		core = UniversalDDSLayerFactory.getInstance();
 		core.createParticipant(UniversalDDSLayerFactory.CNET_DOMAIN);
 
@@ -52,11 +58,14 @@ public class CoreServer implements UDIDataReaderListener<ApplicationObject> {
 	public void onNewData(ApplicationObject topicSample) {
 		Message message = (Message) topicSample;
 
-		String msgStr = "Mensagem recebida N?? [" + counter + "] ["
-				+ Serialization.fromJavaByteStream(message.getContent()) + "]";
+		String content = "" + Serialization.fromJavaByteStream(message.getContent());
+		
+		String msgStr = "Mensagem recebida No [" + counter + "] ["
+				+ content + "]";
 
-		// System.out.println(Serialization.fromJavaByteStream(message.getContent()));
 		System.out.println(msgStr);
+		
+		sensorDataHandler.receiveData(content);
 
 		PrivateMessage privateMessage = new PrivateMessage();
 		privateMessage.setGatewayId(message.getGatewayId());

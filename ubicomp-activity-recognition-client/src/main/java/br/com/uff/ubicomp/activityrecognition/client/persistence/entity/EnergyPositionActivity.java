@@ -83,8 +83,13 @@ public class EnergyPositionActivity {
 		return kitchenEnergy;
 	}
 
-	public Float getMeasurementOfExternal_area(Float external_area) {
+	public Float getMeasurementOfExternal_area() {
 		return externalAreaEnergy;
 	}
+        
+        public String toString()
+        {
+            return user_id+";"+ time.toString() +";"+ activity;
+        }
 
 }

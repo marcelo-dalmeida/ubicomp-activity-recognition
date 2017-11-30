@@ -13,11 +13,6 @@ public class Main {
 
 	public static void main (String[] args) throws Exception {
 		
-//		EnergyPositionActivity energyPositionActivity = new EnergyPositionActivity();
-//		
-//		EnergyPositionActivityRepository energyPositionActivityRepository = new EnergyPositionActivityRepository();
-//		energyPositionActivityRepository.save(energyPositionActivity);
-		
 		Instances data = readDatabase();
 		execute(data);
 	}

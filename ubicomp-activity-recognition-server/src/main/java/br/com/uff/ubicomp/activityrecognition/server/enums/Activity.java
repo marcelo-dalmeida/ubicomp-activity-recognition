@@ -1,15 +1,14 @@
 package br.com.uff.ubicomp.activityrecognition.server.enums;
 
 public enum Activity {
-	COOKING, 
-	WASHING_DISHES, 
-	WATCHING_TV, 
-	DINING, 
 	READING, 
-	BATHING, 
-	CLEANING, 
-	USING_PC, 
+	EATING, 
+	COOKING, 
 	SLEEPING, 
-	OUTGO;
-	
+	WATCHING_TV, 
+	WORKING_WITH_PC, 
+	LEAVING, 
+	BATHING, 
+	WASHING_DISHES, 
+	CLEANING_THE_HOUSE;
 }

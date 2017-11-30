@@ -1,8 +1,10 @@
-package br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome;
+package br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.device;
 
 import java.time.LocalTime;
 
-public class LightKitchen implements Device {
+import br.com.uff.ubicomp.activityrecognition.preprocessing.smarthome.Activity;
+
+public class KitchenLight implements Device {
 	private float consumption = (float) 0.448;
 
 @Override

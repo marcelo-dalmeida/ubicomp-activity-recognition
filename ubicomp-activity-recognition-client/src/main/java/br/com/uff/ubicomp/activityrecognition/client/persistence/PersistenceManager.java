@@ -11,7 +11,7 @@ public class PersistenceManager {
 	private EntityManagerFactory emFactory;
 	
 	private PersistenceManager() {
-		emFactory = Persistence.createEntityManagerFactory("ubicomp-activity-recognition-preprocessing");
+		emFactory = Persistence.createEntityManagerFactory("ubicomp-activity-recognition-client");
 	}
 	
 	public static PersistenceManager getInstance() {

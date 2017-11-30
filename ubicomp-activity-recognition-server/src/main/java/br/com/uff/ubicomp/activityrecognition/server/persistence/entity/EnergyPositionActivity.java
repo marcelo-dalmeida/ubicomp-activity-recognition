@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import br.com.uff.ubicomp.activityrecognition.server.enums.Activity;
+import br.com.uff.ubicomp.activityrecognition.server.enums.Environment;
 
 @Entity
 @Table(name = "energy_position_activity")
@@ -21,6 +22,9 @@ public class EnergyPositionActivity {
 	@Column(name = "id")
 	private int id; 
 	
+	@Column(name = "user_id")
+	private int userId; 
+	
 	@Column(name = "start_time")
 	private Date startTime;
 	
@@ -30,8 +34,9 @@ public class EnergyPositionActivity {
 	@Column(name = "average_power")
 	private Float averagePower;
 	
-	@Column(name = "median_position")
-	private Float medianPosition;
+	@Enumerated(EnumType.STRING)
+	@Column(name = "median_position", columnDefinition="enum (Types#CHAR)")
+	private Environment medianPosition;
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name = "activity", columnDefinition="enum (Types#CHAR)")
@@ -69,19 +74,27 @@ public class EnergyPositionActivity {
 		this.averagePower = averagePower;
 	}
 
-	public Float getMedianPosition() {
-		return medianPosition;
-	}
-
-	public void setMedianPosition(Float medianPosition) {
-		this.medianPosition = medianPosition;
-	}
-
 	public Activity getActivity() {
 		return activity;
 	}
 
 	public void setActivity(Activity activity) {
 		this.activity = activity;
+	}
+
+	public Environment getMedianPosition() {
+		return medianPosition;
+	}
+
+	public void setMedianPosition(Environment medianPosition) {
+		this.medianPosition = medianPosition;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 }
